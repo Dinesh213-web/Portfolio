@@ -1,0 +1,141 @@
+body {
+  background-color: #f3f3f3;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.name{
+    font-size: 24px;
+    font-weight: 600;
+}
+.top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 20px;
+}
+
+.round {
+  background-color: #eda303;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #eda303;
+}
+.Links {
+  color: black;
+  padding-left: 68%;
+  text-decoration: none;
+}
+.pro {
+  color: black;
+  text-decoration: none;
+}
+.con {
+  color: black;
+  text-decoration: none;
+}
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  padding-top: 5%;
+}
+.pad{
+  padding-left: 20%;
+}
+.left img {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.right h1 {
+  font-size: 60px;
+  font-weight: 700;
+}
+
+.right h3 {
+  font-weight: 500;
+}
+
+.buttons {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.circle-btn{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    color:black;
+    font-weight:600;
+    border:1px solid black;
+}
+
+.resume{
+    background:#eda303;
+}
+
+.projects{
+    background:#e74c3c;
+}
+
+.contact{
+    background:#5bc0de;
+}
+
+
+.buttons .circle-btn:hover {
+  transform: scale(1.1);
+  background-color: #f3f3f3;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.empty {
+  height: 100px;
+}
+footer {
+  background-color: #f3f3f3;
+  padding: 20px 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #000;
+}
+
+footer hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.footer-section h4 {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.footer-section p,
+.footer-section a {
+  color: #000;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.footer-bottom {
+  text-align: right;
+  font-size: 13px;
+  color: #555;
+  margin-right: 40px;
+}
