@@ -1,56 +1,1232 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" data-theme="dark">
 <head>
-  <title>Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dinesh Veldurthi - Software Developer specializing in Full-Stack Web Development, Google Gemini AI integrations, and Cross-Platform Desktop/Mobile applications.">
+  <meta name="keywords" content="Dinesh Veldurthi, Software Developer, Full Stack, React, Flutter, Python, Gemini API, Portfolio">
+  <meta name="author" content="Dinesh Veldurthi">
+  <title>Dinesh Veldurthi | Software Developer & AI Systems</title>
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="top">
-    <button class="round"></button>
-    <p class="name">Dinesh</p>
-    <p class="job">Software Engineer</p>
-    <a class="Links" href="resume.html">Resume</a> |
-    <a class="pro" href="projects.html">Projects</a> |
-    <a class="con" href="contact.html">Contact</a>
-  </div>
 
-  <div class="main">
-    <div class="left pad">
-      <img src="profile.png" alt="Dinesh">
+  <!-- Accessible Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ========================================================================
+       1. Header & Navigation Bar
+       ======================================================================== -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="#home" class="brand" aria-label="Dinesh Veldurthi Home">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span class="brand-title">Dinesh Veldurthi</span>
+        <span class="brand-role">Software Developer</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Nav Actions: Theme Toggle, Resume CTA, Mobile Hamburger -->
+      <div class="nav-actions">
+        <!-- Theme Toggle (Dark / Light) -->
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle color theme" title="Toggle theme">
+          <!-- Sun icon (for dark mode) -->
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <!-- Moon icon (for light mode) -->
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- Prominent Resume Button (Opens PDF in New Tab) -->
+        <a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-resume btn-sm" title="Open Resume PDF in new tab">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+          <span>Resume (PDF)</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-toggle" class="mobile-toggle-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
     </div>
-    <div class="right">
-      <h1>Hello</h1>
-      <h3>A Bit About Me</h3>
-      <p>I'm a passionate developer who loves building creative web solutions and exploring new technologies.</p>
-      <div class="buttons">
-    <a href="resume.html" class="circle-btn resume">Resume</a>
-    <a href="projects.html" class="circle-btn projects">Projects</a>
-    <a href="contact.html" class="circle-btn contact">Contact</a>
-</div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-drawer" class="mobile-drawer" aria-label="Mobile Navigation Drawer">
+      <a href="#home" class="mobile-nav-link active">Home</a>
+      <a href="#about" class="mobile-nav-link">About</a>
+      <a href="#skills" class="mobile-nav-link">Skills</a>
+      <a href="#projects" class="mobile-nav-link">Projects</a>
+      <a href="#experience" class="mobile-nav-link">Experience</a>
+      <a href="#contact" class="mobile-nav-link">Contact</a>
+      <div class="mobile-actions">
+        <a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-resume">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+          </svg>
+          View Resume (PDF)
+        </a>
+        <a href="resume.pdf" download="Dinesh_Veldurthi_Resume.pdf" class="btn btn-secondary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          Download Resume
+        </a>
+      </div>
     </div>
-  </div>
-  <div class="empty"></div>
-  <footer>
-  <hr>
-  <div class="footer-content">
-    <div class="footer-section">
-      <h4>Phone</h4>
-      <p>91+ 9876543210</p>
-    </div>
-    <div class="footer-section">
-      <h4>Email</h4>
-      <p>dinesh123@gmail.com</p>
-    </div>
-    <div class="footer-section">
-      <h4>Follow Me</h4>
-      <a href="https://www.linkedin.com/in/dinesh-veldurthi-67a7a6357/">LinkedIn</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2025 By Dinesh. Powered and secured by HTML & CSS.</p>
-  </div>
-</footer>
+  </header>
+
+  <!-- ========================================================================
+       Main Content
+       ======================================================================== -->
+  <main id="main-content">
+
+    <!-- ======================================================================
+         2. Hero Section
+         ====================================================================== -->
+    <section id="home" class="hero">
+      <div class="hero-bg-glow" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Hero Text Content -->
+          <div class="hero-content reveal">
+            <div class="hero-status-pill">
+              <span class="status-dot"></span>
+              <span>Open to Software Development Internships & Roles</span>
+            </div>
+
+            <h1 class="hero-title">
+              Hi, I'm <span class="gradient-text">Dinesh Veldurthi</span>
+            </h1>
+
+            <p class="hero-role">
+              Software Developer • Full-Stack & AI Systems
+            </p>
+
+            <p class="hero-bio">
+              Computer Science & IT developer specializing in high-performance web applications, AI API integrations (Google Gemini API), and cross-platform desktop development (Flutter). B.Tech student at LBRCE (CGPA: 8.68/10), HackWave Hackathon Winner, and Former AI Intern at Indian Servers.
+            </p>
+
+            <!-- Call to Actions -->
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">
+                <span>Explore Projects</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+
+              <!-- Main Resume Action -->
+              <a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-resume" title="View official resume in new tab">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                </svg>
+                <span>Resume (PDF)</span>
+              </a>
+
+              <!-- Direct Download Action -->
+              <a href="resume.pdf" download="Dinesh_Veldurthi_Resume.pdf" class="btn btn-secondary" title="Directly download resume file">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                <span>Download</span>
+              </a>
+
+              <a href="mailto:dineshveldurthi007@gmail.com" class="btn btn-outline" title="Send email to Dinesh">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span>Contact</span>
+              </a>
+            </div>
+
+            <!-- Social Links Strip -->
+            <div class="hero-socials">
+              <span class="hero-social-label">Profiles:</span>
+              
+              <!-- GitHub -->
+              <a href="https://github.com/Dinesh213-web" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub Profile" title="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </a>
+
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/in/dinesh-veldurthi-67a7a6357/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn Profile" title="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+              </a>
+
+              <!-- LeetCode -->
+              <a href="https://leetcode.com/u/Dinesh_Veldurthi/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LeetCode Profile" title="LeetCode">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.262a1.375 1.375 0 0 0-.024 1.933 1.375 1.375 0 0 0 1.944.024L13.8 3.518l4.47 4.47a1.375 1.375 0 0 0 1.944-1.944L14.444.438A1.374 1.374 0 0 0 13.483 0zm-7.67 7.79a1.375 1.375 0 0 0-.945.402l-4.43 4.43a1.375 1.375 0 0 0 0 1.945l4.43 4.43a1.375 1.375 0 1 0 1.944-1.945l-3.458-3.457 3.458-3.458a1.375 1.375 0 0 0-.999-2.347zm6.75 3.86a1.375 1.375 0 0 0-1.375 1.375v4.5a1.375 1.375 0 1 0 2.75 0v-4.5a1.375 1.375 0 0 0-1.375-1.375z"/>
+                </svg>
+              </a>
+
+              <!-- HackerRank -->
+              <a href="https://www.hackerrank.com/profile/dineshveldurthi2" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="HackerRank Profile" title="HackerRank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2.025 17.5v-11h1.75v4.45h2.55v-4.45h1.75v11h-1.75v-4.75h-2.55v4.75h-1.75z"/>
+                </svg>
+              </a>
+
+              <!-- Direct Email -->
+              <a href="mailto:dineshveldurthi007@gmail.com" class="social-icon-btn" aria-label="Email Dinesh" title="dineshveldurthi007@gmail.com">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Visual: Dinesh's Profile Illustration with Floating Badges -->
+          <div class="hero-visual reveal reveal-delay-2">
+            <div class="avatar-wrapper">
+              <div class="avatar-inner">
+                <img src="dinesh.jpg" alt="Dinesh Veldurthi - Software Developer" width="340" height="340">
+              </div>
+            </div>
+
+            <!-- Floating Badge: HackWave Hackathon -->
+            <div class="floating-badge badge-top-right">
+              <div class="floating-icon gold">🏆</div>
+              <div>
+                <div>HackWave Hackathon</div>
+                <div style="font-size: 0.7rem; color: var(--text-muted); font-weight: 500;">1st Prize Winner (Team Lead)</div>
+              </div>
+            </div>
+
+            <!-- Floating Badge: AI & Full-Stack -->
+            <div class="floating-badge badge-bottom-left">
+              <div class="floating-icon cyan">⚡</div>
+              <div>
+                <div>AI & Full-Stack Systems</div>
+                <div style="font-size: 0.7rem; color: var(--text-muted); font-weight: 500;">Gemini API • React • Flutter</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Quick Stats Strip -->
+        <div class="stats-strip reveal reveal-delay-3">
+          <div class="stats-grid">
+            
+            <div class="stat-item">
+              <div class="stat-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                </svg>
+              </div>
+              <div>
+                <div class="stat-value">8.68 / 10</div>
+                <div class="stat-label">CGPA • B.Tech CS & IT @ LBRCE</div>
+              </div>
+            </div>
+
+            <div class="stat-item">
+              <div class="stat-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+              </div>
+              <div>
+                <div class="stat-value">1st Prize</div>
+                <div class="stat-label">HackWave Flutter Hackathon</div>
+              </div>
+            </div>
+
+            <div class="stat-item">
+              <div class="stat-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <div>
+                <div class="stat-value">5+ Projects</div>
+                <div class="stat-label">Full Stack, AI & Client Deliveries</div>
+              </div>
+            </div>
+
+            <div class="stat-item">
+              <div class="stat-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                </svg>
+              </div>
+              <div>
+                <div class="stat-value">AI Intern</div>
+                <div class="stat-label">Indian Servers Pvt. Ltd.</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
 
 
+    <!-- ======================================================================
+         3. About Section
+         ====================================================================== -->
+    <section id="about" class="section">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <div class="section-tag">About Dinesh</div>
+          <h2 class="section-title">Engineering With Purpose & <span class="gradient-text">Precision</span></h2>
+          <p class="section-description">
+            A developer driven by building practical, high-impact software from full-stack platforms and AI APIs to cross-platform desktop solutions.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          
+          <!-- Story / Narrative -->
+          <div class="about-story reveal">
+            <h3>Background & Education</h3>
+            <p>
+              I am a Computer Science and Information Technology undergraduate at <strong>Lakireddy Bali Reddy College of Engineering (LBRCE)</strong>, maintaining an <strong>8.68 / 10 CGPA</strong>. My engineering journey bridges full-stack web applications, AI API integrations, and robust client software.
+            </p>
+            <p>
+              During my internship at <strong>Indian Servers Pvt. Ltd.</strong> in Artificial Intelligence and Cybersecurity, I researched AI platforms like Hugging Face, implemented secure API authentication workflows, and developed applications like <em>AlgoMind</em> and the <em>Smart Waste Classifier</em> using the Google Gemini API.
+            </p>
+            <p>
+              As a team lead, I led the creation of <strong>HabitSync</strong> to win <strong>1st Prize at the HackWave Flutter Hackathon</strong>, and engineered a commercial desktop <strong>Gym Management System</strong> delivered to Capo Power House. I enjoy turning complex problem statements into clean, maintainable software.
+            </p>
+
+            <div class="about-details-list">
+              <div class="about-detail-item">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span><strong>Location:</strong> Vijayawada, Andhra Pradesh, India</span>
+              </div>
+              <div class="about-detail-item">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                </svg>
+                <span><strong>Degree:</strong> B.Tech in CS & IT (2024 – 2028 Expected)</span>
+              </div>
+              <div class="about-detail-item">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <span><strong>Availability:</strong> Ready for Summer / Fall Internships</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Core Competency Cards -->
+          <div class="about-cards-grid reveal reveal-delay-2">
+            
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <h4>Full-Stack Web</h4>
+              <p>Building responsive web experiences with React.js, Tailwind CSS, Django REST Framework, Node.js, and Express.</p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+              <h4>AI API Integrations</h4>
+              <p>Integrating Google Gemini API, vision models, prompt engineering, and intelligent caching to power interactive apps.</p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                  <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                </svg>
+              </div>
+              <h4>Cross-Platform Apps</h4>
+              <p>Creating performant desktop & mobile applications using Flutter & Dart with FastAPI and SQLite persistence.</p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+              </div>
+              <h4>Problem Solving</h4>
+              <p>Active competitive programming on LeetCode & HackerRank, with strong fundamentals in Java, C, and Algorithms.</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ======================================================================
+         4. Skills Section
+         ====================================================================== -->
+    <section id="skills" class="section">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <div class="section-tag">Technical Toolkit</div>
+          <h2 class="section-title">Skills & <span class="gradient-text">Technologies</span></h2>
+          <p class="section-description">
+            Organized categories of languages, frameworks, databases, and developer tools backed by real project implementation.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          
+          <!-- Category 1: Languages -->
+          <div class="skill-category-card reveal">
+            <div class="skill-category-header">
+              <div class="skill-cat-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <h3>Programming Languages</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-pill"><span class="skill-dot"></span> Java</span>
+              <span class="skill-pill"><span class="skill-dot"></span> Python</span>
+              <span class="skill-pill"><span class="skill-dot"></span> C</span>
+              <span class="skill-pill"><span class="skill-dot"></span> Dart</span>
+              <span class="skill-pill"><span class="skill-dot"></span> JavaScript</span>
+            </div>
+          </div>
+
+          <!-- Category 2: Web & Frontend -->
+          <div class="skill-category-card reveal reveal-delay-1">
+            <div class="skill-category-header">
+              <div class="skill-cat-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+              <h3>Web & Frontend</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-pill"><span class="skill-dot"></span> React.js</span>
+              <span class="skill-pill"><span class="skill-dot"></span> Tailwind CSS</span>
+              <span class="skill-pill"><span class="skill-dot"></span> HTML5</span>
+              <span class="skill-pill"><span class="skill-dot"></span> CSS3</span>
+              <span class="skill-pill"><span class="skill-dot"></span> Modern ES6+</span>
+            </div>
+          </div>
+
+          <!-- Category 3: Backend & APIs -->
+          <div class="skill-category-card reveal reveal-delay-2">
+            <div class="skill-category-header">
+              <div class="skill-cat-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                  <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                  <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                  <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                </svg>
+              </div>
+              <h3>Backend & APIs</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-pill"><span class="skill-dot"></span> FastAPI</span>
+              <span class="skill-pill"><span class="skill-dot"></span> Django REST</span>
+              <span class="skill-pill"><span class="skill-dot"></span> Google Gemini API</span>
+              <span class="skill-pill"><span class="skill-dot"></span> Node.js</span>
+              <span class="skill-pill"><span class="skill-dot"></span> Express.js</span>
+              <span class="skill-pill"><span class="skill-dot"></span> RESTful APIs</span>
+            </div>
+          </div>
+
+          <!-- Category 4: Application Development -->
+          <div class="skill-category-card reveal">
+            <div class="skill-category-header">
+              <div class="skill-cat-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                  <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                </svg>
+              </div>
+              <h3>App Development</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-pill"><span class="skill-dot"></span> Flutter</span>
+              <span class="skill-pill"><span class="skill-dot"></span> Streamlit</span>
+              <span class="skill-pill"><span class="skill-dot"></span> Desktop Apps</span>
+              <span class="skill-pill"><span class="skill-dot"></span> Mobile UI/UX</span>
+            </div>
+          </div>
+
+          <!-- Category 5: Databases & Storage -->
+          <div class="skill-category-card reveal reveal-delay-1">
+            <div class="skill-category-header">
+              <div class="skill-cat-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                  <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                </svg>
+              </div>
+              <h3>Databases</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-pill"><span class="skill-dot"></span> MySQL</span>
+              <span class="skill-pill"><span class="skill-dot"></span> MongoDB</span>
+              <span class="skill-pill"><span class="skill-dot"></span> SQLite</span>
+              <span class="skill-pill"><span class="skill-dot"></span> Query Optimization</span>
+            </div>
+          </div>
+
+          <!-- Category 6: Developer Tools & AI -->
+          <div class="skill-category-card reveal reveal-delay-2">
+            <div class="skill-category-header">
+              <div class="skill-cat-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="3"></circle>
+                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                </svg>
+              </div>
+              <h3>AI Tools & Platforms</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-pill"><span class="skill-dot"></span> Git & GitHub</span>
+              <span class="skill-pill"><span class="skill-dot"></span> Hugging Face</span>
+              <span class="skill-pill"><span class="skill-dot"></span> AI Dev Tools</span>
+              <span class="skill-pill"><span class="skill-dot"></span> VS Code</span>
+              <span class="skill-pill"><span class="skill-dot"></span> Postman</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ======================================================================
+         5. Projects Section
+         ====================================================================== -->
+    <section id="projects" class="section">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <div class="section-tag">Portfolio Showcase</div>
+          <h2 class="section-title">Selected <span class="gradient-text">Projects</span></h2>
+          <p class="section-description">
+            Production client applications, hackathon-winning builds, and AI-powered platforms demonstrating full-stack execution.
+          </p>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="projects-filter-bar reveal">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="ai">Full-Stack & AI</button>
+          <button class="filter-btn" data-filter="mobile">Desktop & Mobile</button>
+          <button class="filter-btn" data-filter="cyber">Cybersecurity & ML</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+          
+          <!-- Project 1: AlgoMind -->
+          <div class="project-card reveal" data-category="ai">
+            <div class="project-thumbnail">
+              <img src="algo.png" alt="AlgoMind - AI-Assisted DSA Learning Platform" loading="lazy">
+              <div class="project-badges-row">
+                <span class="badge badge-amber">Internship Capstone</span>
+                <span class="badge badge-indigo">Featured</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">AlgoMind</h3>
+              <p class="project-desc">
+                Interactive data structures & algorithms learning platform. Features step-by-step visual algorithm animations, an interactive Google Gemini AI tutor, quiz generation, and SQLite caching to optimize AI token latency.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-tag">React.js</span>
+                <span class="tech-tag">Django REST</span>
+                <span class="tech-tag">Tailwind CSS</span>
+                <span class="tech-tag">Gemini API</span>
+                <span class="tech-tag">SQLite</span>
+              </div>
+              <div class="project-actions">
+                <span class="badge badge-emerald">Indian Servers Final Project</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Gym Management System -->
+          <div class="project-card reveal reveal-delay-1" data-category="mobile">
+            <div class="project-thumbnail">
+              <div class="project-mockup-fallback">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+                <span>Capo Power House Client Software</span>
+              </div>
+              <div class="project-badges-row">
+                <span class="badge badge-emerald">Client Delivery (Paid)</span>
+                <span class="badge badge-indigo">Team Lead</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Gym Management System</h3>
+              <p class="project-desc">
+                Production Windows desktop software engineered and delivered to <em>Capo Power House</em> (₹5,000 project fee). Led the team in designing membership lifecycles, automated subscription renewal alerts, and high-performance local SQLite syncing with a FastAPI backend.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-tag">Flutter</span>
+                <span class="tech-tag">Dart</span>
+                <span class="tech-tag">FastAPI</span>
+                <span class="tech-tag">SQLite</span>
+                <span class="tech-tag">Desktop</span>
+              </div>
+              <div class="project-actions">
+                <span class="badge badge-cyan">Commercial Client Delivery</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: ShareSphere -->
+          <div class="project-card reveal reveal-delay-2" data-category="ai">
+            <a href="https://share-sphere-ecru.vercel.app" target="_blank" rel="noopener noreferrer" class="project-thumbnail project-thumbnail-link" title="Open ShareSphere Live on Vercel">
+              <img src="sharesphere.jpg" alt="ShareSphere - Campus Resource Sharing" loading="lazy">
+              <div class="project-badges-row">
+                <span class="badge badge-emerald"><span class="status-dot-sm"></span> Live on Vercel</span>
+                <span class="badge badge-cyan">MERN Stack</span>
+              </div>
+            </a>
+            <div class="project-body">
+              <h3 class="project-title">
+                <a href="https://share-sphere-ecru.vercel.app" target="_blank" rel="noopener noreferrer" class="project-title-link" title="Open ShareSphere Live on Vercel">
+                  <span>ShareSphere</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              </h3>
+              <p class="project-desc">
+                Collaborative campus resource-sharing platform enabling college students to share textbooks, study notes, and academic equipment. Deployed live on Vercel, engineered full-stack with a React.js interface, Node/Express REST API, and MongoDB data models.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">Express.js</span>
+                <span class="tech-tag">React.js</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Vercel</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://share-sphere-ecru.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" title="Open live ShareSphere website">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  <span>Live Website</span>
+                </a>
+                <a href="https://github.com/Dinesh213-web/ShareSphere" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" title="View Source on GitHub">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: Phishing Attack Detection Telegram Bot -->
+          <div class="project-card reveal" data-category="cyber">
+            <div class="project-thumbnail">
+              <img src="phishing.jpeg" alt="PhishGuard Security Bot" loading="lazy">
+              <div class="project-badges-row">
+                <span class="badge badge-cyan">Cybersecurity</span>
+                <span class="badge badge-amber">ML Detection</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">PhishGuard Security Bot</h3>
+              <p class="project-desc">
+                Machine learning-driven cybersecurity Telegram bot that detects phishing URLs, credential harvesting traps, and malicious links in real-time messages. Provides risk scores and safety recommendations.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Telegram Bot API</span>
+                <span class="tech-tag">Scikit-learn</span>
+                <span class="tech-tag">Cybersecurity</span>
+              </div>
+              <div class="project-actions">
+                <span class="badge badge-indigo">Security Bot Workflow</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5: Smart Waste Classifier -->
+          <div class="project-card reveal reveal-delay-1" data-category="ai">
+            <div class="project-thumbnail">
+              <img src="waste.jpeg" alt="Smart Waste Classifier" loading="lazy">
+              <div class="project-badges-row">
+                <span class="badge badge-emerald">Gemini Vision AI</span>
+                <span class="badge badge-indigo">Sustainability</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Smart Waste Classifier</h3>
+              <p class="project-desc">
+                AI vision application built during the Indian Servers internship with Streamlit and Google Gemini API. Classifies uploaded waste items into recyclable categories with environmental sustainability recommendations.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Streamlit</span>
+                <span class="tech-tag">Gemini Vision API</span>
+              </div>
+              <div class="project-actions">
+                <span class="badge badge-emerald">Indian Servers Task</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6: HabitSync -->
+          <div class="project-card reveal reveal-delay-2" data-category="mobile">
+            <div class="project-thumbnail">
+              <div class="project-mockup-fallback">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+                <span>HackWave 1st Prize Winner</span>
+              </div>
+              <div class="project-badges-row">
+                <span class="badge badge-amber">1st Prize Winner</span>
+                <span class="badge badge-indigo">Flutter Mobile</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">HabitSync</h3>
+              <p class="project-desc">
+                Student habit formation and productivity app built with Flutter. Led the development team to win First Prize at the HackWave Flutter Hackathon, focusing on study habit tracking, streak mechanics, and smooth UI animations.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-tag">Flutter</span>
+                <span class="tech-tag">Dart</span>
+                <span class="tech-tag">Mobile UI/UX</span>
+                <span class="tech-tag">State Management</span>
+              </div>
+              <div class="project-actions">
+                <span class="badge badge-amber">HackWave Hackathon Team Lead</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ======================================================================
+         6. Experience, Education & Achievements Section
+         ====================================================================== -->
+    <section id="experience" class="section">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <div class="section-tag">Career Journey</div>
+          <h2 class="section-title">Experience & <span class="gradient-text">Achievements</span></h2>
+          <p class="section-description">
+            Hands-on internship experience, academic excellence, competitive hackathon awards, and industry credentials.
+          </p>
+        </div>
+
+        <div class="experience-grid">
+          
+          <!-- Column 1: Experience & Education -->
+          <div class="timeline-column reveal">
+            <h3>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+              <span>Work & Education</span>
+            </h3>
+
+            <!-- Internship Card -->
+            <div class="timeline-card">
+              <div class="timeline-period">14 May 2026 – 15 Jul 2026</div>
+              <h4 class="timeline-role">Virtual Intern — AI & Cybersecurity</h4>
+              <div class="timeline-org">Indian Servers Pvt. Ltd.</div>
+              <ul class="timeline-points">
+                <li>Explored AI development platforms, including Hugging Face models and pipelines.</li>
+                <li>Integrated external AI services into applications via secure API keys, token authentication, and response parsing workflows.</li>
+                <li>Built <em>Smart Waste Classifier</em> (Streamlit + Gemini API) and developed <em>AlgoMind</em> as the capstone final project.</li>
+                <li>Strengthened engineering skills in AI API integration, testing, debugging, and production workflows.</li>
+              </ul>
+            </div>
+
+            <!-- Education Card -->
+            <div class="timeline-card">
+              <div class="timeline-period">2024 – 2028 (Expected)</div>
+              <h4 class="timeline-role">B.Tech in Computer Science & Information Technology</h4>
+              <div class="timeline-org">Lakireddy Bali Reddy College of Engineering (LBRCE), Mylavaram</div>
+              <ul class="timeline-points">
+                <li>Academic Performance: <strong>CGPA: 8.68 / 10</strong></li>
+                <li>Core Subjects: Data Structures & Algorithms, Object-Oriented Programming (Java), Database Management, Operating Systems.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Column 2: Achievements & Certifications -->
+          <div class="timeline-column reveal reveal-delay-2">
+            <h3>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="8" r="7"></circle>
+                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+              </svg>
+              <span>Achievements & Certifications</span>
+            </h3>
+
+            <!-- Achievement 1: HackWave -->
+            <div class="achievement-card">
+              <div class="achievement-icon">🥇</div>
+              <div class="achievement-info">
+                <h4>First Prize — HackWave Flutter Hackathon</h4>
+                <p>Served as Team Lead; designed and developed <em>HabitSync</em>, a student productivity and habit tracking mobile application.</p>
+              </div>
+            </div>
+
+            <!-- Achievement 2: Blind Coding -->
+            <div class="achievement-card">
+              <div class="achievement-icon">🥈</div>
+              <div class="achievement-info">
+                <h4>Second Prize — Blind Coding Competition (2024)</h4>
+                <p>Demonstrated syntax mastery and algorithmic precision by writing defect-free code with monitor display disabled.</p>
+              </div>
+            </div>
+
+            <!-- Achievement 3: SIH -->
+            <div class="achievement-card">
+              <div class="achievement-icon">🎯</div>
+              <div class="achievement-info">
+                <h4>Smart India Hackathon 2025</h4>
+                <p>Cleared internal college round, presenting innovative solutions for national-level problem statements.</p>
+              </div>
+            </div>
+
+            <!-- Achievement 4: e-Yantra -->
+            <div class="achievement-card">
+              <div class="achievement-icon">🤖</div>
+              <div class="achievement-info">
+                <h4>e-Yantra Robotics Competition (eYRC), IIT Bombay</h4>
+                <p>Participating in competitive robotics and embedded systems online tasks organized by IIT Bombay.</p>
+              </div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="achievement-card">
+              <div class="achievement-icon">📜</div>
+              <div class="achievement-info">
+                <h4>Industry Certifications</h4>
+                <p>• <strong>Cisco Courses:</strong> HTML, CSS, JavaScript, Python, Cybersecurity.<br>
+                   • <strong>Simplilearn SkillUp:</strong> Introduction to MySQL.</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ======================================================================
+         7. Contact Section
+         ====================================================================== -->
+    <section id="contact" class="section">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <div class="section-tag">Get in Touch</div>
+          <h2 class="section-title">Let's Connect & <span class="gradient-text">Collaborate</span></h2>
+          <p class="section-description">
+            Have an internship opportunity, a project to discuss, or just want to connect? Reach out directly via email, phone, or LinkedIn!
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Direct Contact Cards -->
+          <div class="contact-card reveal">
+            <h3 class="contact-card-title">Contact Information</h3>
+            <p class="contact-card-desc">
+              I am actively seeking software engineering internships and technical developer roles. Feel free to reach out anytime.
+            </p>
+
+            <div class="contact-methods">
+              
+              <!-- Email -->
+              <div class="contact-method-item">
+                <div class="contact-method-left">
+                  <div class="contact-method-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                      <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="contact-method-label">Email</div>
+                    <div class="contact-method-val">
+                      <a href="mailto:dineshveldurthi007@gmail.com">dineshveldurthi007@gmail.com</a>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="copy-btn" data-copy="dineshveldurthi007@gmail.com" title="Copy email address" aria-label="Copy email address">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  <span>Copy</span>
+                </button>
+              </div>
+
+              <!-- Phone -->
+              <div class="contact-method-item">
+                <div class="contact-method-left">
+                  <div class="contact-method-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="contact-method-label">Phone</div>
+                    <div class="contact-method-val">
+                      <a href="tel:+918978656289">+91 8978656289</a>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="copy-btn" data-copy="+918978656289" title="Copy phone number" aria-label="Copy phone number">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  <span>Copy</span>
+                </button>
+              </div>
+
+              <!-- Location -->
+              <div class="contact-method-item">
+                <div class="contact-method-left">
+                  <div class="contact-method-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="contact-method-label">Location</div>
+                    <div class="contact-method-val">Vijayawada, Andhra Pradesh, India</div>
+                  </div>
+                </div>
+                <span class="badge badge-indigo">IST (UTC+5:30)</span>
+              </div>
+
+            </div>
+
+            <!-- Quick Profiles Row -->
+            <div style="margin-top: auto; padding-top: 16px; border-top: 1px solid var(--border-subtle);">
+              <div style="font-size: 0.8125rem; font-weight: 600; color: var(--text-muted); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.05em;">Social Profiles:</div>
+              <div class="hero-socials" style="margin-bottom: 0;">
+                <a href="https://github.com/Dinesh213-web" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub Profile" title="GitHub">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/dinesh-veldurthi-67a7a6357/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn Profile" title="LinkedIn">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                  </svg>
+                </a>
+                <a href="https://leetcode.com/u/Dinesh_Veldurthi/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LeetCode Profile" title="LeetCode">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.262a1.375 1.375 0 0 0-.024 1.933 1.375 1.375 0 0 0 1.944.024L13.8 3.518l4.47 4.47a1.375 1.375 0 0 0 1.944-1.944L14.444.438A1.374 1.374 0 0 0 13.483 0zm-7.67 7.79a1.375 1.375 0 0 0-.945.402l-4.43 4.43a1.375 1.375 0 0 0 0 1.945l4.43 4.43a1.375 1.375 0 1 0 1.944-1.945l-3.458-3.457 3.458-3.458a1.375 1.375 0 0 0-.999-2.347zm6.75 3.86a1.375 1.375 0 0 0-1.375 1.375v4.5a1.375 1.375 0 1 0 2.75 0v-4.5a1.375 1.375 0 0 0-1.375-1.375z"/>
+                  </svg>
+                </a>
+                <a href="https://www.hackerrank.com/profile/dineshveldurthi2" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="HackerRank Profile" title="HackerRank">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2.025 17.5v-11h1.75v4.45h2.55v-4.45h1.75v11h-1.75v-4.75h-2.55v4.75h-1.75z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Message Composer -->
+          <div class="contact-card reveal reveal-delay-2">
+            <h3 class="contact-card-title">Send a Direct Message</h3>
+            <p class="contact-card-desc">
+              Fill out this quick form to open a draft in your email client addressed directly to Dinesh.
+            </p>
+
+            <form id="contact-form" class="contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="sender-name" class="form-label">Your Name</label>
+                  <input type="text" id="sender-name" class="form-input" placeholder="e.g. Recruiter / Hiring Lead" required>
+                </div>
+                <div class="form-group">
+                  <label for="sender-email" class="form-label">Your Email</label>
+                  <input type="email" id="sender-email" class="form-input" placeholder="e.g. recruiter@company.com" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="sender-subject" class="form-label">Subject</label>
+                <input type="text" id="sender-subject" class="form-input" placeholder="e.g. Software Engineering Internship Opportunity" required>
+              </div>
+
+              <div class="form-group">
+                <label for="sender-message" class="form-label">Message</label>
+                <textarea id="sender-message" class="form-textarea" placeholder="Hi Dinesh, I saw your portfolio and would like to discuss..." required></textarea>
+              </div>
+
+              <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; margin-top: auto; padding-top: 10px;">
+                <div class="form-notice">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Direct recipient: dineshveldurthi007@gmail.com</span>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                  <span>Send via Email</span>
+                </button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ======================================================================
+         8. Recruiter Call to Action Banner
+         ====================================================================== -->
+    <div class="container reveal">
+      <div class="cta-banner">
+        <div class="cta-banner-glow" aria-hidden="true"></div>
+        <h2>Ready to Build Something <span class="gradient-text">Exceptional</span>?</h2>
+        <p>
+          I am actively looking for software development internships and technical opportunities. Feel free to view my resume, explore my code repositories, or get in touch directly.
+        </p>
+        <div class="cta-actions">
+          <a href="mailto:dineshveldurthi007@gmail.com" class="btn btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <span>Send Email</span>
+          </a>
+
+          <!-- Resume PDF Button -->
+          <a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-resume">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+            </svg>
+            <span>View Resume (PDF)</span>
+          </a>
+
+          <a href="https://www.linkedin.com/in/dinesh-veldurthi-67a7a6357/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+            <span>LinkedIn Profile</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+
+  <!-- ========================================================================
+       8. Footer
+       ======================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      
+      <div class="footer-top">
+        
+        <!-- Brand & Bio -->
+        <div class="footer-brand">
+          <h3>Dinesh Veldurthi</h3>
+          <p>
+            Software developer passionate about crafting robust web applications, AI API integrations, and cross-platform desktop solutions.
+          </p>
+          <a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-resume btn-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+            </svg>
+            <span>View Resume (PDF)</span>
+          </a>
+        </div>
+
+        <!-- Section Navigation -->
+        <div class="footer-nav">
+          <h4>Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Background</a></li>
+            <li><a href="#skills">Skills & Toolkit</a></li>
+            <li><a href="#projects">Selected Projects</a></li>
+            <li><a href="#experience">Experience & Awards</a></li>
+            <li><a href="#contact">Contact Dinesh</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Links (No contact form, compact professional links) -->
+        <div class="footer-contact">
+          <h4>Direct Contact</h4>
+          <div class="footer-contact-info">
+            <div class="footer-contact-item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <a href="mailto:dineshveldurthi007@gmail.com">dineshveldurthi007@gmail.com</a>
+            </div>
+
+            <div class="footer-contact-item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <a href="tel:+918978656289">+91 8978656289</a>
+            </div>
+
+            <div class="footer-contact-item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Vijayawada, Andhra Pradesh, India</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <p>© 2026 Dinesh Veldurthi. Crafted with Semantic HTML5, CSS3 & JavaScript.</p>
+        
+        <div class="footer-social-icons">
+          <a href="https://github.com/Dinesh213-web" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="GitHub Profile">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/dinesh-veldurthi-67a7a6357/" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="LinkedIn Profile">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+          </a>
+          <a href="https://leetcode.com/u/Dinesh_Veldurthi/" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="LeetCode Profile">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.262a1.375 1.375 0 0 0-.024 1.933 1.375 1.375 0 0 0 1.944.024L13.8 3.518l4.47 4.47a1.375 1.375 0 0 0 1.944-1.944L14.444.438A1.374 1.374 0 0 0 13.483 0zm-7.67 7.79a1.375 1.375 0 0 0-.945.402l-4.43 4.43a1.375 1.375 0 0 0 0 1.945l4.43 4.43a1.375 1.375 0 1 0 1.944-1.945l-3.458-3.457 3.458-3.458a1.375 1.375 0 0 0-.999-2.347zm6.75 3.86a1.375 1.375 0 0 0-1.375 1.375v4.5a1.375 1.375 0 1 0 2.75 0v-4.5a1.375 1.375 0 0 0-1.375-1.375z"/>
+            </svg>
+          </a>
+          <a href="https://www.hackerrank.com/profile/dineshveldurthi2" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="HackerRank Profile">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2.025 17.5v-11h1.75v4.45h2.55v-4.45h1.75v11h-1.75v-4.75h-2.55v4.75h-1.75z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Back to Top Smooth Scroll Button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <script src="script.js"></script>
 </body>
 </html>
